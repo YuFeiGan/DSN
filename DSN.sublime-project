@@ -1,0 +1,38 @@
+{
+    "folders":
+    [
+        {
+            // "file_exclude_patterns":
+            //         [
+            //             "*.sublime-workspace"
+            //         ],
+            // "folder_exclude_patterns":
+            // [
+            //  "doc",
+            //  "test"
+            // ],
+            // "follow_symlinks": true,
+            "path":"src",
+            "folder_exclude_patterns":
+            [
+                "test",
+                "gtest"
+            ]
+        },
+        {
+            "path": "include"
+        }
+    ],
+    "settings":
+    {
+        "sublimeclang_options":
+        [
+            "-isystem", "/usr/local/include",
+            "-I", "/Users/ganyufei/Documents/DSN-master/include",
+            "-I", "/Users/ganyufei/Documents/DSN-master/src",
+            "-isystem", "/usr/local/opt/openblas/include",
+            "-isystem", "/Developer/NVIDIA/CUDA-5.5/include",
+            "-Wall"
+        ]
+    }
+}

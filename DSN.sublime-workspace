@@ -1,0 +1,977 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"if",
+				"if	If Condition"
+			],
+			[
+				"wei",
+				"weight	Dtype *"
+			],
+			[
+				"we",
+				"weight	Dtype *"
+			],
+			[
+				"num",
+				"num_output_	int"
+			],
+			[
+				"ke",
+				"kernel_w_	int"
+			],
+			[
+				"weig",
+				"weight	Dtype *"
+			],
+			[
+				"gr",
+				"group_	int"
+			],
+			[
+				"cblasno",
+				"CblasNoTrans	CBLAS_TRANSPOSE"
+			],
+			[
+				"caffe_cpu_gemm",
+				"caffe_cpu_gemm(const CBLAS_TRANSPOSE TransA, const CBLAS_TRANSPOSE TransB, const int M, const int N, const int K, const Dtype alpha, const Dtype *A, const Dtype *B, const Dtype beta, Dtype *C)	void"
+			],
+			[
+				"for",
+				"for	For Loop"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"df",
+				"df_do"
+			],
+			[
+				"model",
+				"model0"
+			],
+			[
+				"te",
+				"tesize"
+			],
+			[
+				"ep",
+				"epoch"
+			],
+			[
+				"b",
+				"batchSize"
+			],
+			[
+				"r",
+				"ReLU"
+			],
+			[
+				"d",
+				"Dropout"
+			],
+			[
+				"train",
+				"traintime"
+			],
+			[
+				"batc",
+				"batchData"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"ba",
+				"batchData"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"im",
+				"imagename"
+			],
+			[
+				"floa",
+				"FloatTensor"
+			],
+			[
+				"dat",
+				"data"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"tar",
+				"targets"
+			],
+			[
+				"in",
+				"inputs"
+			],
+			[
+				"do",
+				"dofile"
+			],
+			[
+				"tn",
+				"FloatTensor"
+			],
+			[
+				"data",
+				"Data"
+			],
+			[
+				"ten",
+				"FloatTensor"
+			],
+			[
+				"dt",
+				"Data"
+			],
+			[
+				"ta",
+				"transpose"
+			],
+			[
+				"hi",
+				"highlight"
+			],
+			[
+				"inp",
+				"inputs"
+			],
+			[
+				"T",
+				"Temp"
+			],
+			[
+				"D",
+				"Data"
+			],
+			[
+				"m",
+				"mlp"
+			],
+			[
+				"to",
+				"toTensor"
+			],
+			[
+				"t",
+				"trainData_Tempt"
+			],
+			[
+				"f",
+				"FloatTensor"
+			],
+			[
+				"mode",
+				"model"
+			],
+			[
+				"mo",
+				"modelID"
+			],
+			[
+				"lo",
+				"load"
+			],
+			[
+				"bat",
+				"batchsize"
+			],
+			[
+				"Data",
+				"DataTemp"
+			],
+			[
+				"test",
+				"testData"
+			],
+			[
+				"tra",
+				"trainData_Tempt"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"pred",
+				"pred"
+			],
+			[
+				"so",
+				"Soft"
+			],
+			[
+				"w",
+				"weights"
+			],
+			[
+				"ml",
+				"mlp1"
+			],
+			[
+				"l",
+				"labels"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "DSN.sublime-project",
+			"settings":
+			{
+				"buffer_size": 942,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Markdown Preview/Markdown.sublime-build",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"pc",
+				"Package Control: List Packages"
+			],
+			[
+				"pcr",
+				"Package Control: Remove Package"
+			],
+			[
+				"mou",
+				"Markdown: Open with Mou.app"
+			],
+			[
+				"mar",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"make",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Copy to Clipboard"
+			],
+			[
+				"con",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: r",
+				"Package Control: Remove Package"
+			],
+			[
+				"pak",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			],
+			[
+				"project",
+				"Project: Add Folder"
+			]
+		],
+		"width": 489.0
+	},
+	"console":
+	{
+		"height": 127.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"file_history":
+	[
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/proto/caffe.proto",
+		"/Users/ganyufei/Documents/DSN-master/examples/best_cifar10_9.65/cifar-10_solver.prototxt",
+		"/Users/ganyufei/Documents/DSN-master/include/caffe/vision_layers.hpp",
+		"/Users/ganyufei/Downloads/Cells-master/src/cells/cells.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/layers/hinge_loss_layer.cpp",
+		"/Users/ganyufei/Documents/DSN-master/DSN.sublime-project",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/layers/squaredhinge_loss_layer.cpp",
+		"/Users/ganyufei/Documents/DSN-master/examples/best_cifar10_9.65/cifar-10.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/caffe.sublime-project",
+		"/Users/ganyufei/Documents/DSN-master/src/caffe/layer_factory.cpp",
+		"/Users/ganyufei/Documents/DSN-master/src/caffe/layers/loss_layer.cpp",
+		"/Users/ganyufei/Documents/DSN-master/src/caffe/net.cpp",
+		"/Users/ganyufei/Documents/DSN-master/src/caffe/proto/caffe.proto",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/proto/caffe.pb.h",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/loss_layers.hpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/layer_factory.cpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/util/math_functions.hpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/common.hpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/util/rng.hpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/util/device_alternate.hpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/layers/loss_layer.cpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/vision_layers.hpp",
+		"/Users/ganyufei/Documents/DSN-master/examples/best_cifar10_9.65/train_full.sh",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/util/math_functions.cpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/internal_thread.hpp",
+		"/Users/ganyufei/Downloads/Cells-master/src/configfile/configfile.h",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/internal_thread.cpp",
+		"/Users/ganyufei/Documents/caffe-master/examples/mytest/lenet_train_test.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/mnist/train_lenet.sh",
+		"/Users/ganyufei/Documents/caffe-master/examples/mnist/lenet_solver.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/mnist/lenet_train_test.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/cifar10/train_quick.sh",
+		"/Users/ganyufei/Documents/caffe-master/examples/cifar10/cifar10_quick_solver.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/mytest/train.sh",
+		"/Users/ganyufei/Documents/caffe-master/examples/imagenet/create_imagenet.sh",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/layers/lbp_layer.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/proto/CMakeLists.txt",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/util/mkl_alternate.hpp",
+		"/usr/local/opt/openblas/include/cblas.h",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/util/thread.hpp",
+		"/Users/ganyufei/Documents/caffe-master/tools/convert_imageset.cpp",
+		"/Users/ganyufei/Documents/caffe-master/examples/imagenet/bvlc_caffenet_full_conv.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/mytest/solver.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/mytest/train_test.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/mytest/lenet_solver.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/mnist/create_mnist.sh",
+		"/Users/ganyufei/Documents/caffe-master/examples/mytest/train_lenet.sh",
+		"/Users/ganyufei/Documents/caffe-master/examples/mnist/lenet.prototxt",
+		"/Users/ganyufei/Documents/caffe-master/examples/Brodatz/Brodatz.cpp",
+		"/Users/ganyufei/Documents/caffe-master/examples/mnist/convert_mnist_data.cpp",
+		"/Users/ganyufei/Documents/caffe-master/data/ilsvrc12/get_ilsvrc_aux.sh",
+		"/Users/ganyufei/Documents/caffe-master/tools/train_net.cpp",
+		"/Users/ganyufei/Documents/caffe-master/tools/caffe.cpp",
+		"/Users/ganyufei/Documents/caffe-master/python/classify.py",
+		"/Users/ganyufei/Documents/caffe-master/examples/feature_extraction/readme.md",
+		"/Users/ganyufei/Documents/caffe-master/data/cifar10/test_batch.bin",
+		"/Users/ganyufei/Documents/caffe-master/data/mnist/t10k-labels-idx1-ubyte",
+		"/Users/ganyufei/Documents/caffe-master/data/mnist/t10k-images-idx3-ubyte",
+		"/Users/ganyufei/Documents/caffe-master/Makefile",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/test/test_lbp_layer.cpp",
+		"/Users/ganyufei/Desktop/LearningC++/LearningC++.sublime-project",
+		"/Users/ganyufei/Documents/caffe-master/examples/cifar10/convert_cifar_data.cpp",
+		"/Users/ganyufei/Documents/caffe-master/examples/cifar10/create_cifar10.sh",
+		"/Users/ganyufei/Desktop/LearningC++/leveldb.cpp",
+		"/usr/include/sys/stat.h",
+		"/usr/local/include/gflags/gflags.h",
+		"/Users/ganyufei/Documents/caffe-master/examples/B/B.cpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/layer.hpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/blob.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/layers/data_layer.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/util/im2col.cpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/blob.hpp",
+		"/Users/ganyufei/Documents/caffe-master/Makefile.config",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/test/test_gradient_check_util.hpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/util/benchmark.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/gtest/gtest-all.cpp",
+		"/Users/ganyufei/Documents/caffe-master/test_lbp_layer.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/mycode/lbp_layer.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/test/test_convolution_layer.cpp",
+		"/Users/ganyufei/Documents/caffe-master/include/caffe/proto/caffe.pb.h",
+		"/Users/ganyufei/Documents/caffe-master/.build_release/src/caffe/proto/caffe_pretty_print.pb.cc",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/layers/conv_layer.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/layers/lbp_layer.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/layer_factory.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/vision_layers.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/blob.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/blob.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/layer.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/mycode/lbp_layer.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/proto/caffe.proto",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/proto/caffe_pretty_print.proto",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/proto/caffe.pb.h",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/proto/caffe_pretty_print.proto",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/loss_layers.hpp",
+		"/Users/ganyufei/Documents/caffe-master/CMakeLists.txt",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/test/test_caffe_main.cpp",
+		"/Users/ganyufei/Documents/caffe-master/src/caffe/test/cmake_test_defines.hpp.in",
+		"/Users/ganyufei/Desktop/performance_analysis_in_content-based_retrieval_with_textures.md",
+		"/usr/local/include/boost/smart_ptr/shared_ptr.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/layers/pooling_layer.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/common.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/layers/pooling_layer.cu",
+		"/Users/ganyufei/Library/Application Support/Sublime Text 2/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/Users/ganyufei/Desktop/test.txt",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/note.md",
+		"/Users/ganyufei/Library/Application Support/Sublime Text 2/Packages/SublimeClang/SublimeClang.sublime-settings",
+		"/Users/ganyufei/Library/Application Support/Sublime Text 2/Packages/Makefile Improved/README.rst",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/common_layers.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/gtest/CMakeLists.txt",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/caffe.sublime-project",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/layers/sigmoid_layer.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/glog-0.3.3/src/windows/glog/logging.h",
+		"/Users/ganyufei/Desktop/tiny-cnn/CNN.sublime-project",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/syncedmem.cpp",
+		"/Users/ganyufei/Downloads/whu-master-thesis-template-master/README.md",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/syncedmem.hpp",
+		"/Users/ganyufei/Downloads/tiny-cnn-master/README.md",
+		"/Users/ganyufei/Desktop/Export - All Entries (2014-12-20)/2014-11-15 - Entries.md",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/texlive-fonts-extra-doc texlive-fonts-recommended",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/util/im2col.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/util/math_functions.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/util/math_functions.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/util/im2col.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/caffe.hpp",
+		"/Users/ganyufei/Downloads/tiny-cnn-master/src/test.cpp",
+		"/Users/ganyufei/Downloads/tiny-cnn-master/src/main.cpp",
+		"/Users/ganyufei/Downloads/tiny-cnn-master/include/layer.h",
+		"/usr/include/c++/4.2.1/bits/stl_vector.h"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"",
+			"<open files>",
+			"test_lbp_layer.cpp",
+			"",
+			"lbp_layer.cpp",
+			"",
+			"lbp_layer.cpp",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"squared",
+			"squaredhingeloss",
+			"SquaredHingeLoss",
+			"SquaredHingeLossLayer",
+			"num",
+			"squar",
+			"lbp",
+			"SquaredHingeLossParameter",
+			"loss",
+			"lbp",
+			"mkl_alternate.hpp",
+			"cblas.h",
+			"Thread",
+			"num_items",
+			"FLAGS_solver",
+			"GlobalInit",
+			"Datum",
+			"leveldb",
+			"db_backend",
+			" top ",
+			"top",
+			"static ",
+			"static",
+			"cudnn",
+			"$(STATIC_NAME)",
+			"DEBUG_BUILD_DIR",
+			"DEBUG",
+			"debug",
+			"lbp",
+			"conv",
+			"convolution",
+			"ConvolutionLayer",
+			"convolution",
+			"mutable_convolutions_param",
+			"mutable_convolution_param",
+			"convolution_param",
+			"mutable_lbp_param",
+			"mutable_convolution_param",
+			"caffe_conv",
+			"ConvolutionParameter",
+			"conv_param",
+			"test_lbp_layer.cpp\ntest_lbp_layer.cpp\n\nconv_param",
+			"test_lbp_layer.cpp\ntest_lbp_layer.cpp\n\nConvolutionParameter",
+			"lbp",
+			"caffe_conv",
+			"rm",
+			"$(NAME)",
+			"all ",
+			"all",
+			"pycaffe",
+			"PROTO_BUILD_DIR",
+			"PROTO_SRC_DIR",
+			"python",
+			"protoc",
+			"PROTO_SRC_DIR",
+			"protoc",
+			"distribute",
+			"distribu",
+			"proto",
+			"lbp",
+			"STATIC_NAME",
+			"NAME",
+			"all",
+			"layer_param_",
+			"ConvolutionLayer",
+			"caffe::LayerParameter",
+			"LayerParameter",
+			"convolution_param",
+			"ConvolutionParameter",
+			"log",
+			"lbp",
+			"LayerParameter_LayerType_CONVOLUTION",
+			"37",
+			"GetLBPLayer",
+			"GetConvolutionLayer",
+			"LBP",
+			"convolution_param",
+			"ConvolutionParameter",
+			"lbp_param",
+			"ConvolutionParameter",
+			"convolution_param",
+			"LBPParameter",
+			"ConvolutionParameter",
+			"convolution_param",
+			"lbp",
+			"41",
+			"CONVOLUTION",
+			"LayerType",
+			"LayerParameter",
+			"41",
+			"ConvolutionParameter",
+			"CONVOLUTION",
+			"param",
+			"LayerParameter_LayerType_CONTRASTIVE_LOSS",
+			"SIGMOID_CROSS_ENTROPY_LOSS",
+			"ConvolutionLayer",
+			" ConvolutionLayer ",
+			" ConvolutionLayer",
+			"ConvolutionLayer",
+			"TEST_GPUID",
+			"TEST_FILTER",
+			"runtest",
+			"TEST_MAIN_SRC",
+			"TEST_ALL_BIN",
+			"test_all",
+			"TEST_BINS",
+			"TEST_ALL_BIN",
+			"test",
+			"gtest_filter",
+			"TEST_FILTER",
+			"runtest",
+			"protoc",
+			"PROTOBUF",
+			"proto",
+			"--cpp_out",
+			"layer_param",
+			"convolution_param",
+			"weight_filler",
+			"PoolingLayer",
+			"删除",
+			"loss",
+			"Backward",
+			"PoolingLayer",
+			"CaffeMallocHost",
+			"BlobProto",
+			"back",
+			"backwa",
+			"};\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"LBPLayer",
+			"mutable_lbp_param",
+			"lbp_param",
+			"caffe_lbp",
+			"LBPParameter",
+			"lbp_param",
+			"LBPParameter",
+			"LBPLayer",
+			"$"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "DSN.sublime-project",
+					"settings":
+					{
+						"buffer_size": 942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								271,
+								271
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 39.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CMakeEditor":
+	{
+		"height": 302.0
+	},
+	"output.clang":
+	{
+		"height": 112.0
+	},
+	"output.exec":
+	{
+		"height": 159.0
+	},
+	"output.markdown":
+	{
+		"height": 138.0
+	},
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"caffe",
+				"src/caffe/proto/caffe.pb.h"
+			],
+			[
+				"loss",
+				"include/caffe/loss_layers.hpp"
+			],
+			[
+				"hinge",
+				"src/caffe/layers/hinge_loss_layer.cpp"
+			],
+			[
+				"proto",
+				"src/caffe/proto/caffe.proto"
+			],
+			[
+				"layer",
+				"src/caffe/layer_factory.cpp"
+			],
+			[
+				"",
+				"include/caffe/loss_layers.hpp"
+			],
+			[
+				"visio",
+				"include/caffe/vision_layers.hpp"
+			],
+			[
+				"hing",
+				"src/caffe/layers/hinge_loss_layer.cpp"
+			],
+			[
+				"math",
+				"src/caffe/util/math_functions.cpp"
+			],
+			[
+				"mat",
+				"src/caffe/util/math_functions.cpp"
+			],
+			[
+				"device_alternate",
+				"include/caffe/util/device_alternate.hpp"
+			],
+			[
+				"comm",
+				"include/caffe/common.hpp"
+			],
+			[
+				"co",
+				"src/caffe/proto/CMakeLists.txt"
+			],
+			[
+				"rng",
+				"include/caffe/util/rng.hpp"
+			],
+			[
+				"com",
+				"include/caffe/common.hpp"
+			],
+			[
+				"utu",
+				"src/caffe/util/math_functions.cpp"
+			],
+			[
+				"threa",
+				"include/caffe/internal_thread.hpp"
+			],
+			[
+				"vi",
+				"include/caffe/vision_layers.hpp"
+			],
+			[
+				"lbp",
+				"src/caffe/layers/lbp_layer.cpp"
+			],
+			[
+				"visolayer",
+				"include/caffe/vision_layers.hpp"
+			],
+			[
+				"data",
+				"src/caffe/layers/data_layer.cpp"
+			],
+			[
+				"im2",
+				"src/caffe/util/im2col.cpp"
+			],
+			[
+				"blob",
+				"include/caffe/blob.hpp"
+			],
+			[
+				"b",
+				"src/caffe/blob.cpp"
+			],
+			[
+				"la",
+				"include/caffe/layer.hpp"
+			],
+			[
+				"prot",
+				"src/caffe/proto/caffe.proto"
+			],
+			[
+				"l",
+				"src/mycode/lbp_layer.cpp"
+			],
+			[
+				"test_c",
+				"src/caffe/test/test_convolution_layer.cpp"
+			],
+			[
+				"con",
+				"src/caffe/layers/conv_layer.cpp"
+			],
+			[
+				"v",
+				"include/caffe/vision_layers.hpp"
+			],
+			[
+				"blo",
+				"src/caffe/blob.cpp"
+			],
+			[
+				"layer_factory.cpp",
+				"src/caffe/layer_factory.cpp"
+			],
+			[
+				"caf",
+				"src/caffe/proto/caffe.proto"
+			],
+			[
+				"lay",
+				"include/caffe/layer.hpp"
+			],
+			[
+				"lb",
+				"src/mycode/lbp_layer.cpp"
+			],
+			[
+				"pool",
+				"src/caffe/layers/pooling_layer.cu"
+			],
+			[
+				"vis",
+				"include/caffe/vision_layers.hpp"
+			],
+			[
+				"conv",
+				"src/caffe/layers/conv_layer.cpp"
+			],
+			[
+				"poo",
+				"src/caffe/layers/pooling_layer.cpp"
+			],
+			[
+				"not",
+				"include/caffe/note.md"
+			],
+			[
+				"math_functions",
+				"include/caffe/util/math_functions.hpp"
+			],
+			[
+				"caff",
+				"include/caffe/caffe.hpp"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/Users/ganyufei/Documents/DSN-master/src/caffe/DSN.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 255.0,
+	"status_bar_visible": true
+}
