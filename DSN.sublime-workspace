@@ -232,11 +232,62 @@
 	"buffers":
 	[
 		{
-			"file": "DSN.sublime-project",
+			"file": "src/caffe/net.cpp",
 			"settings":
 			{
-				"buffer_size": 942,
+				"buffer_size": 12394,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "name: \"CaffeNet\"\nlayers {\n  layer {\n    name: \"data\"\n    type: \"data\"\n    source: \"cifar10_gcn-leveldb/cifar-train-leveldb\"\n    batchsize: 100\n  }\n  top: \"data\"\n  top: \"label\"\n}\n    num_output: 192\n    kernelsize: 5\n    pad: 2\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n\n    num_output: 160\n    group: 1\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n\\\n\n\n\n\n\n\n \"cccp1\"\n}\nlayers {\n  layer {\n    name: \"cccp2\"\n    type: \"cccp\"\n    num_output: 96\n    group: 1\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"cccp1\"\n  top: \"cccp2\"\n}\nlayers {\n  layer {\n    name: \"relu_cccp2\"\n    type: \"relu\"\n  }\n  bottom: \"cccp2\"\n  top: \"cccp2\"\n}\nlayers {\n  layer {\n    name: \"pool1\"\n    type: \"pool\"\n    pool: MAX\n    kernelsize: 3\n    stride: 2\n  }\n  bottom: \"cccp2\"\n  top: \"pool1\"\n}\nlayers {\n  layer {\n    name: \"drop3\"\n    type: \"dropout\"\n    dropout_ratio: 0.5\n    mean_on_test: true\n    mean_on_train: false\n  }\n  bottom: \"pool1\"\n  top: \"pool1\"\n}\nlayers {\n  layer {\n    name: \"conv2\"\n    type: \"conv\"\n    num_output: 192\n    kernelsize: 5\n    pad: 2\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"pool1\"\n  top: \"conv2\"\n}\nlayers {\n  layer {\n    name: \"split2\"\n    type: \"split\"\n  }\n  bottom: \"conv2\"\n  top: \"conv2_split0\"\n  top: \"conv2_split1\"\n}\n\nlayers {\n  layer {\n    name: \"ip_svm2\"\n    type: \"innerproduct\"\n    num_output: 10\n    weight_filler {\n      type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n    }\n    blobs_lr_policy: \"power_inv\"\n    blobs_lr_policy: \"power_inv\"\n    blobs_lr: 0.001\n    blobs_lr: 0.002\n    weight_decay: 1\n    weight_decay: 0.\n  }\n  bottom: \"conv2_split1\"\n  top: \"ip_svm2\"\n}\n\nlayers {\n  layer {\n  name: \"loss\"\n  type: \"squaredhingeloss\"\n  }\n  bottom: \"ip_svm2\"\n  bottom: \"label\"\n}\n\nlayers {\n  layer {\n    name: \"relu2\"\n    type: \"relu\"\n  }\n  bottom: \"conv2_split0\"\n  top: \"conv2_split0\"\n}\n\nlayers {\n  layer {\n    name: \"cccp3\"\n    type: \"cccp\"\n    num_output: 192\n    group: 1\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"conv2_split0\"\n  top: \"cccp3\"\n}\nlayers {\n  layer {\n    name: \"relu_cccp3\"\n    type: \"relu\"\n  }\n  bottom: \"cccp3\"\n  top: \"cccp3\"\n}\nlayers {\n  layer {\n    name: \"cccp4\"\n    type: \"cccp\"\n    num_output: 192\n    group: 1\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"cccp3\"\n  top: \"cccp4\"\n}\nlayers {\n  layer {\n    name: \"relu_cccp4\"\n    type: \"relu\"\n  }\n  bottom: \"cccp4\"\n  top: \"cccp4\"\n}\nlayers {\n  layer {\n    name: \"pool2\"\n    type: \"pool\"\n    pool: MAX\n    kernelsize: 3\n    stride: 2\n  }\n  bottom: \"cccp4\"\n  top: \"pool2\"\n}\nlayers {\n  layer {\n    name: \"drop6\"\n    type: \"dropout\"\n    dropout_ratio: 0.5\n    mean_on_test: true\n    mean_on_train: false\n  }\n  bottom: \"pool2\"\n  top: \"pool2\"\n}\nlayers {\n  layer {\n    name: \"conv3\"\n    type: \"conv\"\n    num_output: 192\n    kernelsize: 3\n    pad: 1\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"pool2\"\n  top: \"conv3\"\n}\n\nlayers {\n  layer {\n    name: \"split3\"\n    type: \"split\"\n  }\n  bottom: \"conv3\"\n  top: \"conv3_split0\"\n  top: \"conv3_split1\"\n}\n\nlayers {\n  layer {\n    name: \"ip_svm3\"\n    type: \"innerproduct\"\n    num_output: 10\n    weight_filler {\n      type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n    }\n    blobs_lr_policy: \"power_inv\"\n    blobs_lr_policy: \"power_inv\"\n    blobs_lr: 0.001\n    blobs_lr: 0.002\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"conv3_split1\"\n  top: \"ip_svm3\"\n}\n\nlayers {\n  layer {\n  name: \"loss\"\n  type: \"squaredhingeloss\"\n  }\n  bottom: \"ip_svm3\"\n  bottom: \"label\"\n}\n\nlayers {\n  layer {\n    name: \"relu3\"\n    type: \"relu\"\n  }\n  bottom: \"conv3_split0\"\n  top: \"conv3_split0\"\n}\n\nlayers {\n  layer {\n    name: \"cccp5\"\n    type: \"cccp\"\n    num_output: 192\n    group: 1\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 1.\n    blobs_lr: 2.\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"conv3_split0\"\n  top: \"cccp5\"\n}\nlayers {\n  layer {\n    name: \"relu_cccp5\"\n    type: \"relu\"\n  }\n  bottom: \"cccp5\"\n  top: \"cccp5\"\n}\nlayers {\n  layer {\n    name: \"cccp6\"\n    type: \"cccp\"\n    num_output: 10\n    group: 1\n    weight_filler {\n      type: \"gaussian\"\n      std: 0.05\n      #type: \"xavier\"\n    }\n    bias_filler {\n      type: \"constant\"\n      value: 0.\n    }\n    blobs_lr: 0.1\n    blobs_lr: 0.2\n    weight_decay: 1.\n    weight_decay: 0.\n  }\n  bottom: \"cccp5\"\n  top: \"cccp6\"\n}\n#layers {\n#  layer {\n#    name: \"relu_cccp6\"\n#    type: \"relu\"\n#  }\n#  bottom: \"cccp6\"\n#  top: \"cccp6\"\n#}\nlayers {\n  layer {\n    name: \"pool3\"\n    type: \"pool\"\n    pool: AVE\n    stride: 1\n    kernelsize: 8\n  }\n  bottom: \"cccp6\"\n  top: \"pool3\"\n}\n#layers {\n# layer {\n#   name: \"ip1\"\n#   type: \"innerproduct\"\n#   num_output: 10\n#   weight_filler {\n#     type: \"xavier\"\n#     #value: 0\n#     #type: \"gaussian\"\n#     #std: 0.2\n#   }\n#   bias_filler {\n#     type: \"xavier\"\n#     #type: \"constant\"\n#     #value: 0.5\n#   }\n#   blobs_lr: 1\n#   blobs_lr: 2\n#   weight_decay: 1\n#   weight_decay: 0\n# }\n# bottom: \"cccp6\"\n# top: \"ip1\"\n#}\nlayers {\n  layer {\n    name: \"loss\"\n    type: \"squaredhingeloss\"\n  }\n  bottom: \"pool3\"\n  bottom: \"label\"\n}\n",
+			"file": "examples/best_cifar10_9.65/cifar-10.prototxt",
+			"file_size": 7385,
+			"file_write_time": 1421234365000000,
+			"settings":
+			{
+				"buffer_size": 6408,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/caffe/layers/split_layer.cpp",
+			"settings":
+			{
+				"buffer_size": 2159,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/caffe/layers/loss_layer.cpp",
+			"settings":
+			{
+				"buffer_size": 10668,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/caffe/proto/caffe.proto",
+			"settings":
+			{
+				"buffer_size": 7930,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/caffe/layers/cccp_layer.cpp",
+			"settings":
+			{
+				"buffer_size": 8537,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "include/caffe/vision_layers.hpp",
+			"settings":
+			{
+				"buffer_size": 22582,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -323,7 +374,7 @@
 				"Project: Add Folder"
 			]
 		],
-		"width": 489.0
+		"width": 396.0
 	},
 	"console":
 	{
@@ -340,6 +391,14 @@
 	},
 	"file_history":
 	[
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/models/imagenet.prototxt",
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/DSN.sublime-project",
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/src/caffe/solver.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/src/caffe/blob.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/include/caffe/common.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/src/caffe/util/math_functions.cpp",
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/include/caffe/util/math_functions.hpp",
+		"/Users/ganyufei/YuFeiGan Repositories/DSN/src/caffe/proto/caffe.proto",
 		"/Users/ganyufei/Documents/caffe-master/src/caffe/proto/caffe.proto",
 		"/Users/ganyufei/Documents/DSN-master/examples/best_cifar10_9.65/cifar-10_solver.prototxt",
 		"/Users/ganyufei/Documents/DSN-master/include/caffe/vision_layers.hpp",
@@ -459,15 +518,7 @@
 		"/Users/ganyufei/Downloads/tiny-cnn-master/README.md",
 		"/Users/ganyufei/Desktop/Export - All Entries (2014-12-20)/2014-11-15 - Entries.md",
 		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/texlive-fonts-extra-doc texlive-fonts-recommended",
-		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/util/im2col.cpp",
-		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/util/math_functions.hpp",
-		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/util/math_functions.cpp",
-		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/util/im2col.hpp",
-		"/Users/ganyufei/YuFeiGan Repositories/caffe0/include/caffe/caffe.hpp",
-		"/Users/ganyufei/Downloads/tiny-cnn-master/src/test.cpp",
-		"/Users/ganyufei/Downloads/tiny-cnn-master/src/main.cpp",
-		"/Users/ganyufei/Downloads/tiny-cnn-master/include/layer.h",
-		"/usr/include/c++/4.2.1/bits/stl_vector.h"
+		"/Users/ganyufei/YuFeiGan Repositories/caffe0/src/caffe/util/im2col.cpp"
 	],
 	"find":
 	{
@@ -475,7 +526,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 95.0,
 		"where_history":
 		[
 			"",
@@ -493,6 +544,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lbp",
+			"group",
+			"conv1_split1",
+			"conv1_split0",
+			"name",
+			"bottom[1]",
+			"cpu",
+			"caffe::mode",
+			"caffe:mode",
 			"squared",
 			"squaredhingeloss",
 			"SquaredHingeLoss",
@@ -611,16 +671,7 @@
 			"layer_param",
 			"convolution_param",
 			"weight_filler",
-			"PoolingLayer",
-			"删除",
-			"loss",
-			"Backward",
-			"PoolingLayer",
-			"CaffeMallocHost",
-			"BlobProto",
-			"back",
-			"backwa",
-			"};\n"
+			"PoolingLayer"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -647,22 +698,23 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "DSN.sublime-project",
+					"file": "src/caffe/net.cpp",
 					"settings":
 					{
-						"buffer_size": 942,
+						"buffer_size": 12394,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								271,
-								271
+								6434,
+								6434
 							]
 						],
 						"settings":
@@ -716,11 +768,467 @@
 								"bh_single_quote_close"
 							],
 							"syntax": "Packages/C++/C++.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2788.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "examples/best_cifar10_9.65/cifar-10.prototxt",
+					"settings":
+					{
+						"buffer_size": 6408,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								415,
+								427
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/User/Proto (Raw).tmLanguage",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/caffe/layers/split_layer.cpp",
+					"settings":
+					{
+						"buffer_size": 2159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1991,
+								1994
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 589.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/caffe/layers/loss_layer.cpp",
+					"settings":
+					{
+						"buffer_size": 10668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1966,
+								1975
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5031.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/caffe/proto/caffe.proto",
+					"settings":
+					{
+						"buffer_size": 7930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								666,
+								666
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 99.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/caffe/layers/cccp_layer.cpp",
+					"settings":
+					{
+						"buffer_size": 8537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								228,
+								228
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "include/caffe/vision_layers.hpp",
+					"settings":
+					{
+						"buffer_size": 22582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21235,
+								21235
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2523.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -787,11 +1295,43 @@
 		[
 			[
 				"caffe",
-				"src/caffe/proto/caffe.pb.h"
+				"src/caffe/proto/caffe.proto"
+			],
+			[
+				"vision_layers",
+				"include/caffe/vision_layers.hpp"
+			],
+			[
+				"cccp",
+				"src/caffe/layers/cccp_layer.cpp"
 			],
 			[
 				"loss",
-				"include/caffe/loss_layers.hpp"
+				"src/caffe/layers/loss_layer.cpp"
+			],
+			[
+				"split",
+				"src/caffe/layers/split_layer.cpp"
+			],
+			[
+				"net",
+				"src/caffe/net.cpp"
+			],
+			[
+				"mat",
+				"src/caffe/util/math_functions.cpp"
+			],
+			[
+				"m",
+				"src/caffe/util/math_functions.cpp"
+			],
+			[
+				"bo",
+				"src/caffe/blob.cpp"
+			],
+			[
+				"blob.cpp",
+				"src/caffe/blob.cpp"
 			],
 			[
 				"hinge",
@@ -819,10 +1359,6 @@
 			],
 			[
 				"math",
-				"src/caffe/util/math_functions.cpp"
-			],
-			[
-				"mat",
 				"src/caffe/util/math_functions.cpp"
 			],
 			[

@@ -28,8 +28,8 @@
         "sublimeclang_options":
         [
             "-isystem", "/usr/local/include",
-            "-I", "/Users/ganyufei/Documents/DSN-master/include",
-            "-I", "/Users/ganyufei/Documents/DSN-master/src",
+            "-isystem", "/Users/ganyufei/YuFeiGan Repositories/DSN/include",
+            "-isystem", "/Users/ganyufei/YuFeiGan Repositories/DSN/src",
             "-isystem", "/usr/local/opt/openblas/include",
             "-isystem", "/Developer/NVIDIA/CUDA-5.5/include",
             "-Wall"
