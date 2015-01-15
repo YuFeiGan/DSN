@@ -211,7 +211,6 @@ void Net<Dtype>::GetLearningRateAndWeightDecay() {
 template <typename Dtype>
 const vector<Blob<Dtype>*>& Net<Dtype>::ForwardPrefilled() {
   for (int i = 0; i < layers_.size(); ++i) {
-    // LOG(ERROR) << "Forwarding " << layer_names_[i];
     layers_[i]->Forward(bottom_vecs_[i], &top_vecs_[i]);
   }
   return net_output_blobs_;
@@ -233,8 +232,6 @@ string Net<Dtype>::Forward(const string& input_blob_protos) {
   BlobProtoVector blob_proto_vec;
   if (net_input_blobs_.size()) {
     blob_proto_vec.ParseFromString(input_blob_protos);
-    CHECK_EQ(blob_proto_vec.blobs_size(), net_input_blobs_.size())
-        << "Incorrect input size.";
     for (int i = 0; i < blob_proto_vec.blobs_size(); ++i) {
       net_input_blobs_[i]->FromProto(blob_proto_vec.blobs(i));
     }
@@ -259,8 +256,7 @@ Dtype Net<Dtype>::Backward() {
       Dtype layer_loss = layers_[i]->Backward(
           top_vecs_[i], true, &bottom_vecs_[i]);
       loss += layer_loss;
-      //if (layer_loss != 0) 
-         layer_loss_.push_back(layer_loss);
+      layer_loss_.push_back(layer_loss);
     } 
   }
   return loss;

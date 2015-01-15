@@ -1,7 +1,9 @@
 // Copyright 2013 Yangqing Jia
 
+
 #include <cuda_runtime.h>
 #include <cublas_v2.h>
+
 
 #include "caffe/blob.hpp"
 #include "caffe/common.hpp"

@@ -23,7 +23,7 @@ template <typename Dtype>
 class NeuronLayer : public Layer<Dtype> {
  public:
   explicit NeuronLayer(const LayerParameter& param)
-     : Layer<Dtype>(param) {}
+     : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 };
@@ -33,7 +33,7 @@ template <typename Dtype>
 class ReLULayer : public NeuronLayer<Dtype> {
  public:
   explicit ReLULayer(const LayerParameter& param)
-      : NeuronLayer<Dtype>(param) {}
+      : NeuronLayer<Dtype>(param) {};
 
  protected:
   virtual void Forward_cpu(const vector<Blob<Dtype>*>& bottom,
@@ -51,7 +51,7 @@ template <typename Dtype>
 class TanHLayer : public NeuronLayer<Dtype> {
  public:
   explicit TanHLayer(const LayerParameter& param)
-      : NeuronLayer<Dtype>(param) {}
+      : NeuronLayer<Dtype>(param) {};
 
  protected:
   virtual void Forward_cpu(const vector<Blob<Dtype>*>& bottom,
@@ -69,7 +69,7 @@ template <typename Dtype>
 class SigmoidLayer : public NeuronLayer<Dtype> {
  public:
   explicit SigmoidLayer(const LayerParameter& param)
-      : NeuronLayer<Dtype>(param) {}
+      : NeuronLayer<Dtype>(param) {};
 
  protected:
   virtual void Forward_cpu(const vector<Blob<Dtype>*>& bottom,
@@ -88,7 +88,7 @@ template <typename Dtype>
 class BNLLLayer : public NeuronLayer<Dtype> {
  public:
   explicit BNLLLayer(const LayerParameter& param)
-      : NeuronLayer<Dtype>(param) {}
+      : NeuronLayer<Dtype>(param) {};
 
  protected:
   virtual void Forward_cpu(const vector<Blob<Dtype>*>& bottom,
@@ -107,7 +107,7 @@ template <typename Dtype>
 class DropoutLayer : public NeuronLayer<Dtype> {
  public:
   explicit DropoutLayer(const LayerParameter& param)
-      : NeuronLayer<Dtype>(param) {}
+      : NeuronLayer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -134,7 +134,7 @@ template <typename Dtype>
 class SplitLayer : public Layer<Dtype> {
  public:
   explicit SplitLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -155,7 +155,7 @@ template <typename Dtype>
 class FlattenLayer : public Layer<Dtype> {
  public:
   explicit FlattenLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -176,7 +176,7 @@ template <typename Dtype>
 class InnerProductLayer : public Layer<Dtype> {
  public:
   explicit InnerProductLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -201,7 +201,7 @@ template <typename Dtype>
 class LRNLayer : public Layer<Dtype> {
  public:
   explicit LRNLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -231,7 +231,7 @@ template <typename Dtype>
 class Im2colLayer : public Layer<Dtype> {
  public:
   explicit Im2colLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -256,7 +256,7 @@ template <typename Dtype>
 class PoolingLayer : public Layer<Dtype> {
  public:
   explicit PoolingLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -284,7 +284,7 @@ template <typename Dtype>
 class ConvolutionLayer : public Layer<Dtype> {
  public:
   explicit ConvolutionLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -320,7 +320,7 @@ template <typename Dtype>
 class ConcatLayer : public Layer<Dtype> {
  public:
   explicit ConcatLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -354,7 +354,7 @@ class DataLayer : public Layer<Dtype> {
 
  public:
   explicit DataLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual ~DataLayer();
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
@@ -386,7 +386,7 @@ template <typename Dtype>
 class HDF5DataLayer : public Layer<Dtype> {
  public:
   explicit HDF5DataLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual ~HDF5DataLayer();
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
@@ -413,7 +413,7 @@ template <typename Dtype>
 class SoftmaxLayer : public Layer<Dtype> {
  public:
   explicit SoftmaxLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -438,7 +438,7 @@ template <typename Dtype>
 class MultinomialLogisticLossLayer : public Layer<Dtype> {
  public:
   explicit MultinomialLogisticLossLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -459,7 +459,7 @@ template <typename Dtype>
 class InfogainLossLayer : public Layer<Dtype> {
  public:
   explicit InfogainLossLayer(const LayerParameter& param)
-      : Layer<Dtype>(param), infogain_() {}
+      : Layer<Dtype>(param), infogain_() {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -488,7 +488,7 @@ template <typename Dtype>
 class SoftmaxWithLossLayer : public Layer<Dtype> {
  public:
   explicit SoftmaxWithLossLayer(const LayerParameter& param)
-      : Layer<Dtype>(param), softmax_layer_(new SoftmaxLayer<Dtype>(param)) {}
+      : Layer<Dtype>(param), softmax_layer_(new SoftmaxLayer<Dtype>(param)) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -515,7 +515,7 @@ template <typename Dtype>
 class EuclideanLossLayer : public Layer<Dtype> {
  public:
   explicit EuclideanLossLayer(const LayerParameter& param)
-      : Layer<Dtype>(param), difference_() {}
+      : Layer<Dtype>(param), difference_() {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -537,7 +537,7 @@ class EuclideanLossLayer : public Layer<Dtype> {
  class HingeLossLayer : public Layer<Dtype> {
   public:
    explicit HingeLossLayer(const LayerParameter& param)
-       : Layer<Dtype>(param) {}
+       : Layer<Dtype>(param) {};
    virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
        vector<Blob<Dtype>*>* top);
  
@@ -556,7 +556,7 @@ template <typename Dtype>
  class SquaredHingeLossLayer : public Layer<Dtype> {
   public:
    explicit SquaredHingeLossLayer(const LayerParameter& param)
-       : Layer<Dtype>(param) {}
+       : Layer<Dtype>(param) {};
    virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
        vector<Blob<Dtype>*>* top);
 
@@ -576,7 +576,7 @@ template <typename Dtype>
 class AccuracyLayer : public Layer<Dtype> {
  public:
   explicit AccuracyLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
@@ -619,7 +619,7 @@ template <typename Dtype>
 class CCCPPoolingLayer : public Layer<Dtype> {
  public:
   explicit CCCPPoolingLayer(const LayerParameter& param)
-      : Layer<Dtype>(param) {}
+      : Layer<Dtype>(param) {};
   virtual void SetUp(const vector<Blob<Dtype>*>& bottom,
       vector<Blob<Dtype>*>* top);
 
